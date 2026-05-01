@@ -1,232 +1,150 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ساندوش الابراهيم</title>
+‏<!DOCTYPE html>
+‏<html lang="ar" dir="rtl">
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+‏<head>
+‏<meta charset="UTF-8">
+‏<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+‏<title>Portfolio - اسمك</title>
+
+‏<style>
+‏body {
+‏    margin: 0;
+‏    font-family: Arial;
+‏    background: #f5f5f5;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #fff8f0;
-  text-align: center;
-  color: #333;
+‏/* Navbar */
+‏nav {
+‏    background: #111;
+‏    color: white;
+‏    padding: 15px;
+‏    text-align: center;
 }
 
-header {
-  background: linear-gradient(90deg, #c70000, #ff0000);
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+‏nav a {
+‏    color: white;
+‏    margin: 0 15px;
+‏    text-decoration: none;
 }
 
-header img {
-  width: 55px;
-  border-radius: 10px;
+‏/* Hero */
+‏.hero {
+‏    background: #222;
+‏    color: white;
+‏    text-align: center;
+‏    padding: 60px 20px;
 }
 
-nav {
-  margin: 15px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+‏.hero h1 {
+‏    margin: 0;
 }
 
-nav button {
-  background: white;
-  color: #c70000;
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 30px;
-  cursor: pointer;
+‏/* Sections */
+‏.section {
+‏    padding: 40px;
+‏    text-align: center;
 }
 
-nav button.active,
-nav button:hover {
-  background: #c70000;
-  color: white;
+‏.cards {
+‏    display: flex;
+‏    justify-content: center;
+‏    flex-wrap: wrap;
+‏    gap: 20px;
 }
 
-.menu {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 30px;
+‏.card {
+‏    background: white;
+‏    padding: 20px;
+‏    width: 250px;
+‏    border-radius: 10px;
+‏    box-shadow: 0 0 10px #ccc;
 }
 
-.menu.hidden {
-  display: none;
+‏/* Contact */
+‏input, textarea {
+‏    width: 80%;
+‏    padding: 10px;
+‏    margin: 10px;
 }
 
-h2 {
-  grid-column: 1 / -1;
-  color: #c70000;
+‏button {
+‏    padding: 10px 20px;
+‏    background: #111;
+‏    color: white;
+‏    border: none;
+‏    cursor: pointer;
 }
+‏</style>
 
-.dish {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-}
+‏</head>
 
-.dish img,
-.dish video {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
+‏<body>
 
-.dish p {
-  padding: 10px;
-  font-weight: bold;
-}
+‏<nav>
+‏    <a href="#about">عنّي</a>
+‏    <a href="#skills">المهارات</a>
+‏    <a href="#projects">الأعمال</a>
+‏    <a href="#contact">تواصل</a>
+‏</nav>
 
-footer {
-  background: #c70000;
-  color: white;
-  padding: 15px;
-  margin-top: 20px;
-}
-</style>
-</head>
+‏<div class="hero">
+‏    <h1>مرحباً، أنا اسمك</h1>
+‏    <p>مصمم / مسوّق / مطور</p>
+‏</div>
 
-<body>
+‏<div id="about" class="section">
+‏    <h2>عنّي</h2>
+‏    <p>
+        أنا شخص مهتم بمجال التسويق والتصميم، وأسعى لتطوير مهاراتي وبناء مشاريع قوية.
+‏    </p>
+‏</div>
 
-<header>
-  <img src="WhatsApp Image 2025-12-29 at 3.46.52 PM.jpeg">
-  <h1>ساندوش الابراهيم</h1>
-</header>
+<div id="skills" class="section">
+    <h2>المهارات</h2>
 
-<nav>
-  <button onclick="showSection('sandwich', this)">السندويش</button>
-  <button onclick="showSection('snack', this)">السناك</button>
-  <button onclick="showSection('burger', this)">البرغر</button>
-  <button onclick="showSection('offers', this)">العروضات</button>
-  <button onclick="showSection('shawarma', this)">الشاورما</button>
-  <button onclick="showSection('drinks', this)">المشروبات</button>
-  <button onclick="showSection('potato', this)">البطاطا</button>
-  <button onclick="showSection('extras', this)">الإضافات</button>
-</nav>
-
-<!-- السندوش -->
-<section id="sandwich" class="menu hidden">
-<h2>🥙 السندويش</h2>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.48.37 PM.jpeg"><p>مقانق – 270000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.48.37 PM (1).jpeg"><p>سجق – 270000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.48.37 PM (2).jpeg"><p>طاوق – 250000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.48.37 PM (3).jpeg"><p>بطاطا – 120000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.48.37 PM (4).jpeg"><p>كرسبي – 250000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 5.14.16 AM (1).jpeg"><p>فهيتا – 350000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.28.37 PM.jpeg"><p>زنغر – 300000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 5.14.16 AM.jpeg"><p>تشيز طاوق – 350000</p></div>
-</section>
-
-<!-- السناك -->
-<section id="snack" class="menu hidden">
-<h2>🍽️ السناك</h2>
-<div class="dish"><img src="WhatsApp Image 2025-12-30 at 11.21.07 AM.jpeg"><p>صحن كريزي كسبي – 300000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 5.14.09 AM (1).jpeg"><p>بروستد – 1000000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.32.57 PM.jpeg"><p>كرسبي – 540000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.28.30 PM.jpeg"><p>شورما – 540000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.48.37 PM (2).jpeg"><p>طاوق – 540000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 5.14.16 AM (1).jpeg"><p>فهيتا – 350000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-29 at 3.40.23 PM.jpeg"><p>كبة مشوية 12 حبة – 1000000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 5.14.09 AM.jpeg"><p>كبة مقلية 12 حبة – 600000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 5.17.05 AM.jpeg"><p>ورق عنب صحن 8 قطع – 300000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-29 at 3.40.23 PM (1).jpeg"><p>موزريلا ستكس 6 قطع – 300000</p></div>
-</section>
-
-<!-- البرغر -->
-<section id="burger" class="menu hidden">
-<h2>🍔 البرغر</h2>
-<div class="dish"><img src="WhatsApp Image 2025-12-30 at 11.21.07 AM (1).jpeg"><p>غولد برغر – 400000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-30 at 11.21.08 AM.jpeg"><p>برغر لحم – 300000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-29 at 3.42.13 PM.jpeg"><p>برغر دجاج – 250000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-29 at 3.40.09 PM.jpeg"><p>برغر سكلوب – 400000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-29 at 3.40.19 PM.jpeg"><p>تشيز برغر – 360000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-30 at 11.21.07 AM (2).jpeg"><p>دبل برغر – 450000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-29 at 3.40.27 PM.jpeg"><p>ابراهيم برغر – 400000</p></div>
-</section>
-
-<!-- العروضات (فيديو كصنف) -->
-<section id="offers" class="menu hidden">
-<h2>🎁 العروضات</h2>
-<div class="dish">
-  <video controls poster="offer-cover.jpg">
-    <source src="WhatsApp Video 2026-01-03 at 3.27.11 PM.mp4" type="video/mp4">
-  </video>
-  <p>🔥 عرض الأسبوع – شاهد التفاصيل</p>
-    <video controls poster="offer-cover.jpg">
-    <source src="WhatsApp Video 2026-01-03 at 3.27.11 PM.mp4" type="video/mp4">
-  </video>
-  <p>🔥 عرض الأسبوع – شاهد التفاصيل</p>
+    <div class="cards">
+        <div class="card">Photoshop</div>
+        <div class="card">Marketing</div>
+        <div class="card">HTML / CSS</div>
+        <div class="card">WordPress</div>
+    </div>
 </div>
-<div class="dish"><img src="WhatsApp Image 2026-01-03 at 12.04.24 PM.jpeg"><p>عرض – 2000000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-03 at 12.04.30 PM.jpeg"><p>عرض – 7000000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-03 at 12.04.31 PM.jpeg"><p>عرض – 7000000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-03 at 12.04.33 PM.jpeg"><p>عرض – 15000000</p></div>
-</section>
 
-<!-- الشاورما -->
-<section id="shawarma" class="menu hidden">
-<h2>🌯 الشاورما</h2>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.28.09 PM.jpeg"><p>شاورما دجاج كبير – 200000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.28.09 PM.jpeg"><p>شاورما دجاج صغير – 150000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-29 at 3.40.32 PM.jpeg"><p>شاورما لحم كبير – 300000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-29 at 3.40.32 PM.jpeg"><p>شاورما لحم صغير – 180000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-29 at 3.40.36 PM.jpeg"><p>شاورما تركيه دجاج – 400000</p></div>
-<div class="dish"><img src="WhatsApp Image 2025-12-29 at 3.40.36 PM.jpeg"><p>شاورما تركيه لحمة – 450000</p></div>
-</section>
+<div id="projects" class="section">
+    <h2>أعمالي</h2>
 
-<!-- المشروبات -->
-<section id="drinks" class="menu hidden">
-<h2>🥤 المشروبات</h2>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 3.04.10 PM (2).jpeg"><p>بيبسي صغير – 60000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 3.09.25 PM.jpeg"><p>بيبسي تنك – 70000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 3.04.11 PM.jpeg"><p>بيبسي لتر وربع – 130000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 3.04.10 PM (1).jpeg"><p>ماء صغير – 30000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 3.04.10 PM.jpeg"><p>ماء كبير – 40000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 3.04.11 PM (1).jpeg"><p>زي كولا تنك – 50000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 3.04.11 PM (2).jpeg"><p>زي كولا لتر – 100000</p></div>
-</section>
+    <div class="cards">
+        <div class="card">
+            <h3>مشروع 1</h3>
+            <p>تصميم إعلان لمنتج</p>
+        </div>
 
-<!-- البطاطا -->
-<section id="potato" class="menu hidden">
-<h2>🍟 البطاطا</h2>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.48.37 PM (3).jpeg"><p>علبة بطاطا صغيرة – 100000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.48.37 PM (3).jpeg"><p>علبة بطاطا وسط – 200000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 2.48.37 PM (3).jpeg"><p>علبة بطاطا كبيرة – 300000</p></div>
-</section>
+        <div class="card">
+            <h3>مشروع 2</h3>
+            <p>إدارة صفحة انستغرام</p>
+        </div>
 
-<!-- الإضافات -->
-<section id="extras" class="menu hidden">
-<h2>✨ الإضافات</h2>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 3.13.25 PM (1).jpeg"><p>علبة صوص صغيرة – 50000</p></div>
-<div class="dish"><img src="WhatsApp Image 2026-01-01 at 3.13.25 PM.jpeg"><p>علبة صوص كبيرة – 100000</p></div>
-</section>
+        <div class="card">
+            <h3>مشروع 3</h3>
+            <p>تصميم بوستر</p>
+        </div>
+    </div>
+</div>
 
-<footer>
-© 2025 سناك الابراهيم
-</footer>
+<div id="contact" class="section">
+    <h2>تواصل معي</h2>
+
+    <input type="text" placeholder="اسمك"><br>
+    <input type="email" placeholder="ايميلك"><br>
+    <textarea placeholder="رسالتك"></textarea><br>
+
+    <button onclick="sendMsg()">إرسال</button>
+</div>
 
 <script>
-function showSection(id, btn) {
-  document.querySelectorAll('.menu').forEach(s => s.classList.add('hidden'));
-  document.getElementById(id).classList.remove('hidden');
-  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+function sendMsg() {
+    alert("تم إرسال الرسالة!");
 }
 </script>
 
