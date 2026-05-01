@@ -1,151 +1,229 @@
-‏<!DOCTYPE html>
-‏<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
-‏<head>
-‏<meta charset="UTF-8">
-‏<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-‏<title>Portfolio - اسمك</title>
+<title>Portfolio</title>
 
-‏<style>
-‏body {
-‏    margin: 0;
-‏    font-family: Arial;
-‏    background: #f5f5f5;
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-‏/* Navbar */
-‏nav {
-‏    background: #111;
-‏    color: white;
-‏    padding: 15px;
-‏    text-align: center;
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #0f0f0f;
+    color: white;
 }
 
-‏nav a {
-‏    color: white;
-‏    margin: 0 15px;
-‏    text-decoration: none;
+/* Navbar */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
 }
 
-‏/* Hero */
-‏.hero {
-‏    background: #222;
-‏    color: white;
-‏    text-align: center;
-‏    padding: 60px 20px;
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-‏.hero h1 {
-‏    margin: 0;
+nav a:hover {
+    color: #00ffd5;
 }
 
-‏/* Sections */
-‏.section {
-‏    padding: 40px;
-‏    text-align: center;
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #00ffd5, #0066ff);
 }
 
-‏.cards {
-‏    display: flex;
-‏    justify-content: center;
-‏    flex-wrap: wrap;
-‏    gap: 20px;
+.hero h1 {
+    font-size: 50px;
 }
 
-‏.card {
-‏    background: white;
-‏    padding: 20px;
-‏    width: 250px;
-‏    border-radius: 10px;
-‏    box-shadow: 0 0 10px #ccc;
+.hero p {
+    margin-top: 10px;
+    font-size: 20px;
 }
 
-‏/* Contact */
-‏input, textarea {
-‏    width: 80%;
-‏    padding: 10px;
-‏    margin: 10px;
+/* Sections */
+.section {
+    padding: 80px 20px;
+    text-align: center;
 }
 
-‏button {
-‏    padding: 10px 20px;
-‏    background: #111;
-‏    color: white;
-‏    border: none;
-‏    cursor: pointer;
+.section h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
 }
-‏</style>
 
-‏</head>
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
 
-‏<body>
+.card {
+    background: #1a1a1a;
+    padding: 25px;
+    width: 260px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
 
-‏<nav>
-‏    <a href="#about">عنّي</a>
-‏    <a href="#skills">المهارات</a>
-‏    <a href="#projects">الأعمال</a>
-‏    <a href="#contact">تواصل</a>
-‏</nav>
+.card:hover {
+    transform: translateY(-10px);
+    background: #00ffd5;
+    color: black;
+}
 
-‏<div class="hero">
-‏    <h1>مرحباً، أنا اسمك</h1>
-‏    <p>مصمم / مسوّق / مطور</p>
-‏</div>
+/* Contact */
+input, textarea {
+    width: 80%;
+    padding: 12px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+}
 
-‏<div id="about" class="section">
-‏    <h2>عنّي</h2>
-‏    <p>
-        أنا شخص مهتم بمجال التسويق والتصميم، وأسعى لتطوير مهاراتي وبناء مشاريع قوية.
-‏    </p>
-‏</div>
+button {
+    padding: 12px 25px;
+    border: none;
+    background: #00ffd5;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
 
-<div id="skills" class="section">
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+}
+
+/* Animation */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <a href="#about">عنّي</a>
+    <a href="#skills">المهارات</a>
+    <a href="#projects">الأعمال</a>
+    <a href="#contact">تواصل</a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+    <div>
+        <h1>مرحباً، أنا اسمك</h1>
+        <p>مصمم • مسوّق • مبدع</p>
+    </div>
+</div>
+
+<!-- About -->
+<div id="about" class="section fade">
+    <h2>من أنا</h2>
+    <p>أنا متخصص في التسويق والتصميم، أعمل على إنشاء محتوى جذاب وبناء علامات تجارية قوية.</p>
+</div>
+
+<!-- Skills -->
+<div id="skills" class="section fade">
     <h2>المهارات</h2>
-
     <div class="cards">
         <div class="card">Photoshop</div>
         <div class="card">Marketing</div>
-        <div class="card">HTML / CSS</div>
+        <div class="card">UI Design</div>
         <div class="card">WordPress</div>
     </div>
 </div>
 
-<div id="projects" class="section">
+<!-- Projects -->
+<div id="projects" class="section fade">
     <h2>أعمالي</h2>
-
     <div class="cards">
         <div class="card">
-            <h3>مشروع 1</h3>
-            <p>تصميم إعلان لمنتج</p>
+            <h3>حملة إعلانية</h3>
+            <p>تصميم حملة كاملة لمنتج</p>
         </div>
-
         <div class="card">
-            <h3>مشروع 2</h3>
-            <p>إدارة صفحة انستغرام</p>
+            <h3>تصميم بوستر</h3>
+            <p>بوستر احترافي</p>
         </div>
-
         <div class="card">
-            <h3>مشروع 3</h3>
-            <p>تصميم بوستر</p>
+            <h3>إدارة سوشيال</h3>
+            <p>إدارة حسابات</p>
         </div>
     </div>
 </div>
 
-<div id="contact" class="section">
+<!-- Contact -->
+<div id="contact" class="section fade">
     <h2>تواصل معي</h2>
-
     <input type="text" placeholder="اسمك"><br>
     <input type="email" placeholder="ايميلك"><br>
     <textarea placeholder="رسالتك"></textarea><br>
-
     <button onclick="sendMsg()">إرسال</button>
 </div>
 
+<footer>
+    © 2026 - Portfolio
+</footer>
+
 <script>
-function sendMsg() {
-    alert("تم إرسال الرسالة!");
+
+// Animation on scroll
+window.addEventListener("scroll", function() {
+    document.querySelectorAll(".fade").forEach(el => {
+        let pos = el.getBoundingClientRect().top;
+        let screen = window.innerHeight;
+
+        if(pos < screen - 100){
+            el.classList.add("show");
+        }
+    });
+});
+
+function sendMsg(){
+    alert("تم الإرسال بنجاح!");
 }
+
 </script>
 
 </body>
